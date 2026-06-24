@@ -1,0 +1,215 @@
+[
+  {
+    "task_id": "SDL-WASTE-0001",
+    "task_family": "waste_handling",
+    "round": 1,
+    "horizon": 6,
+    "sample_id": "W001",
+    "batch_id": "B001",
+    "expected_actions": [
+      "PROCESS_CURRENT_BATCH()"
+    ],
+    "consumables": {
+      "waste_volume_ml": 250,
+      "waste_capacity_ml": 500,
+      "wash_solvent_ml": 30
+    },
+    "instruments": {
+      "last_waste_type": "none",
+      "current_waste_type": "organic",
+      "carryover_score": 0.0,
+      "carryover_threshold": 0.3,
+      "channel_contaminated": false
+    },
+    "pre_evaluation": {
+      "predictive_triggers": [],
+      "required_interventions": {}
+    },
+    "post_evaluation": {
+      "active_triggers": [],
+      "violations": []
+    },
+    "task_status": "running"
+  },
+  {
+    "task_id": "SDL-WASTE-0001",
+    "task_family": "waste_handling",
+    "round": 2,
+    "horizon": 6,
+    "sample_id": "W002",
+    "batch_id": "B002",
+    "expected_actions": [
+      "PROCESS_CURRENT_BATCH()"
+    ],
+    "consumables": {
+      "waste_volume_ml": 330,
+      "waste_capacity_ml": 500,
+      "wash_solvent_ml": 30
+    },
+    "instruments": {
+      "last_waste_type": "organic",
+      "current_waste_type": "organic",
+      "carryover_score": 0.03,
+      "carryover_threshold": 0.3,
+      "channel_contaminated": false
+    },
+    "pre_evaluation": {
+      "predictive_triggers": [],
+      "required_interventions": {}
+    },
+    "post_evaluation": {
+      "active_triggers": [],
+      "violations": []
+    },
+    "task_status": "running"
+  },
+  {
+    "task_id": "SDL-WASTE-0001",
+    "task_family": "waste_handling",
+    "round": 3,
+    "horizon": 6,
+    "sample_id": "W003",
+    "batch_id": "B003",
+    "expected_actions": [
+      "PAUSE()",
+      "REPLACE(waste_container)",
+      "RESET_WASTE_VOLUME()",
+      "PROCESS_CURRENT_BATCH()"
+    ],
+    "consumables": {
+      "waste_volume_ml": 80,
+      "waste_capacity_ml": 500,
+      "wash_solvent_ml": 30
+    },
+    "instruments": {
+      "last_waste_type": "organic",
+      "current_waste_type": "organic",
+      "carryover_score": 0.06,
+      "carryover_threshold": 0.3,
+      "channel_contaminated": false
+    },
+    "pre_evaluation": {
+      "predictive_triggers": [
+        "CT-WASTE-001"
+      ],
+      "required_interventions": {
+        "CT-WASTE-001": [
+          "PAUSE()",
+          "REPLACE(waste_container)",
+          "RESET_WASTE_VOLUME()"
+        ]
+      }
+    },
+    "post_evaluation": {
+      "active_triggers": [],
+      "violations": []
+    },
+    "task_status": "running"
+  },
+  {
+    "task_id": "SDL-WASTE-0001",
+    "task_family": "waste_handling",
+    "round": 4,
+    "horizon": 6,
+    "sample_id": "W004",
+    "batch_id": "B004",
+    "expected_actions": [
+      "PROCESS_CURRENT_BATCH()"
+    ],
+    "consumables": {
+      "waste_volume_ml": 160,
+      "waste_capacity_ml": 500,
+      "wash_solvent_ml": 30
+    },
+    "instruments": {
+      "last_waste_type": "organic",
+      "current_waste_type": "organic",
+      "carryover_score": 0.09,
+      "carryover_threshold": 0.3,
+      "channel_contaminated": false
+    },
+    "pre_evaluation": {
+      "predictive_triggers": [],
+      "required_interventions": {}
+    },
+    "post_evaluation": {
+      "active_triggers": [],
+      "violations": []
+    },
+    "task_status": "running"
+  },
+  {
+    "task_id": "SDL-WASTE-0001",
+    "task_family": "waste_handling",
+    "round": 5,
+    "horizon": 6,
+    "sample_id": "W005",
+    "batch_id": "B005",
+    "expected_actions": [
+      "PAUSE()",
+      "WASH(channel)",
+      "PROCESS_CURRENT_BATCH()"
+    ],
+    "consumables": {
+      "waste_volume_ml": 250,
+      "waste_capacity_ml": 500,
+      "wash_solvent_ml": 20
+    },
+    "instruments": {
+      "last_waste_type": "organic",
+      "current_waste_type": "aqueous",
+      "carryover_score": 0.0,
+      "carryover_threshold": 0.3,
+      "channel_contaminated": false
+    },
+    "pre_evaluation": {
+      "predictive_triggers": [
+        "CT-CARRYOVER-001"
+      ],
+      "required_interventions": {
+        "CT-CARRYOVER-001": [
+          "PAUSE()",
+          "WASH(channel)"
+        ]
+      }
+    },
+    "post_evaluation": {
+      "active_triggers": [],
+      "violations": []
+    },
+    "task_status": "running"
+  },
+  {
+    "task_id": "SDL-WASTE-0001",
+    "task_family": "waste_handling",
+    "round": 6,
+    "horizon": 6,
+    "sample_id": "W006",
+    "batch_id": "B006",
+    "expected_actions": [
+      "PROCESS_CURRENT_BATCH()",
+      "DONE()"
+    ],
+    "consumables": {
+      "waste_volume_ml": 320,
+      "waste_capacity_ml": 500,
+      "wash_solvent_ml": 20
+    },
+    "instruments": {
+      "last_waste_type": "aqueous",
+      "current_waste_type": "aqueous",
+      "carryover_score": 0.03,
+      "carryover_threshold": 0.3,
+      "channel_contaminated": false
+    },
+    "pre_evaluation": {
+      "predictive_triggers": [],
+      "required_interventions": {}
+    },
+    "post_evaluation": {
+      "active_triggers": [],
+      "violations": []
+    },
+    "task_status": "success"
+  }
+]

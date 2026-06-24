@@ -1,0 +1,13 @@
+# ============================================================
+# SDL-CumuSafeBench — Requirements
+# ============================================================
+# Python 3.9+ recommended.
+# Zero external dependencies — all standard library.
+# ============================================================
+
+# --- Required: none ---
+# core modules used: urllib, ssl, json, os, pathlib, argparse, re, typing, copy
+
+# --- Optional (for convenience, not used by current code) ---
+# dashscope>=1.20.0    # only if you restore the old Qwen dashscope SDK path
+# openai>=1.0.0        # only if you want OpenAI SDK instead of raw urllib
